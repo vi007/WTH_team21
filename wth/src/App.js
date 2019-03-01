@@ -33,7 +33,7 @@ class App extends Component {
 	}
 
 	render() {
-		return <div>{this.state.user == undefined ? <HomePage /> : <Wrapper />}</div>;
+		return <div>{this.state.user == undefined ? <Wrapper /> : <Wrapper />}</div>;
 	}
 }
 
