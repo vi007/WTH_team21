@@ -1,0 +1,12 @@
+import React, { Component } from 'react';
+
+class Subject extends Component {
+    state = {  };
+    render() {
+        return (
+            <div>Homepage</div>
+        );
+    }
+}
+
+export default Subject;
