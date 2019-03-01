@@ -84,3 +84,8 @@
   margin: 23px;
 }
 
+{/* Icons */}
+
+.userIcon {
+  background-image: url(assets/icons/user.png);
+}
