@@ -5,7 +5,7 @@ class HomePage extends Component {
     render() { 
         return ( 
             <div>
-                <button className="normalButton"> Hello </button>
+                <button> Hello </button>
             </div>
          );
     }
