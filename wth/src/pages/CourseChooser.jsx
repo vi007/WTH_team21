@@ -32,19 +32,27 @@ class CourseChooser extends Component {
         console.log("Selected: " + val);
     }
 
+
+
+
+changedvalue(){
+    this.setState({check: ! this.state.check});
+}
+
     renderSubjects() {
         let html = [];
         for (let i = 1; i <= 3; i++) {
             html.push(
                 <h1 key={i}> {this.state.subjects[i]} </h1>)
-            html.push(<div className="field"><input id="switchRoundedDefault" type="checkbox"
+            html.push(<div className="field"><input id={i} type="checkbox"
                                                     name="switchRoundedDefault" className="switch is-rounded"
-                                                    checked="checked"/> <label htmlFor="switchRoundedDefault">Activate
-                Dark mode</label></div>
+                                                    checked="checked"/> <label htmlFor="switchRoundedDefault"></label></div>
             )
         }
         return html
     }
+
+
 
 
     render() {
