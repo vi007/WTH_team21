@@ -47,9 +47,14 @@ class App extends Component {
 
 
 
+
 				<CourseChooser/>
 				{/* {this.state.user ? (<Wrapper/>) : (<SignUp/>) } */}
 
+
+
+
+			 	{/* {this.state.user ? (<Wrapper/>) : (<SignUp/>) } */}
 
 
 
