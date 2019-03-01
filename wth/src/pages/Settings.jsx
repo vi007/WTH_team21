@@ -7,20 +7,20 @@ class Settings extends Component {
         super(props);
         this.state = {
             subjects: [],
-            check: true
+            DarkMode: true
         };
 
     }
 
     changedvalue(){
-        this.setState({check: ! this.state.check});
+        this.setState({check: ! this.state.DarkMode});
     }
 
     render() {
         return (
             <div><h1> Settings </h1>
                 <div className="field">
-                    <input id="switchRoundedDefault" type="checkbox" name="switchRoundedDefault" className="switch is-rounded" checked={this.state.checked} onChanged={this.changedvalue}/>
+                    <input id="switchRoundedDefault" type="checkbox" name="switchRoundedDefault" className="switch is-rounded" checked={this.state.DarkMode} onChanged={this.changedvalue}/>
                     <label for="switchRoundedDefault">Activate Dark mode</label>
 
                 </div>
