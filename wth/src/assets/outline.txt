@@ -1,0 +1,10 @@
+Subject:
+ - title: string
+ -> Contains: Chapter (list)
+
+ Chapter:
+ - number: int
+ - subnumber: int
+ - title: string
+ - isFinished: boolean
+ - timeStudies: int

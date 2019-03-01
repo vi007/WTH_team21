@@ -29,6 +29,7 @@ class SignUp extends Component {
 			e.preventDefault();
 			fire.auth()
 				.createUserWithEmailAndPassword(this.state.email, this.state.password1)
+				//.then(currentUser => fire.firestore().collection('users'.doc(currentUser.uid).set(currentUser)))
 				.catch(error => {
 					console.log(error);
 				});
@@ -38,9 +39,6 @@ class SignUp extends Component {
 	render() {
 		return (
 			<div>
-				{console.log(this.state.email)}
-				{console.log(this.state.password1)}
-				{console.log(this.state.password2)}
 				<h1> Sign Up</h1>
 				<div className="">
 					<div className="FormField">
