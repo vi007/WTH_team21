@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import bulmaSwitch from "bulma-switch";
+// import { disconnect } from 'cluster';
 
 class Settings extends Component {
     constructor() {
@@ -11,9 +13,16 @@ class Settings extends Component {
 
     render() {
         return (
-            <div>Settings</div>
+            <div><h1> Settings </h1>
+                <div className="field">
+                    <input id="switchRoundedDefault" type="checkbox" name="switchRoundedDefault" className="switch is-rounded" checked="checked"/>
+                    <label htmlFor="switchRoundedDefault"/>
+                </div>
+            </div>
         );
     }
 }
+
+
 
 export default Settings;
