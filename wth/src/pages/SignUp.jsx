@@ -28,16 +28,16 @@ class SignUp extends Component {
                 <h1> Sign Up</h1>
                 <div className="">
                     <div className="FormField">
-                        <label className="FormField__Label" htmlFor="username">Username</label>
-                        <input type="username" id="username" className="FormField__Input" placeholder="Enter username" name="username" value={this.state.username} onChange={this.handleChange} />
+                        <label className="inputFieldLabel" htmlFor="username">Username</label>
+                        <input type="username" id="username" className="inputField" placeholder="Enter username" name="username" value={this.state.username} onChange={this.handleChange} />
                     </div>
                     <div className="FormField">
-                        <label className="FormField__Label" htmlFor="password">Password</label>
-                        <input type="password" id="password1" className="FormField__Input" placeholder="Enter password" name="password1" value={this.state.password} onChange={this.handleChange} />
+                        <label className="inputFieldLabel" htmlFor="password">Password</label>
+                        <input type="password" id="password1" className="inputField" placeholder="Enter password" name="password1" value={this.state.password} onChange={this.handleChange} />
                     </div>
                     <div className="FormField">
-                        <label className="FormField__Label" htmlFor="password2">Confirm password</label>
-                        <input type="password" id="password2" className="FormField__Input" placeholder="Repeat password" name="password2" value={this.state.password2} onChange={this.handleChange} />
+                        <label className="inputFieldLabel" htmlFor="password2">Confirm password</label>
+                        <input type="password" id="password2" className="inputField" placeholder="Repeat password" name="password2" value={this.state.password2} onChange={this.handleChange} />
                     </div>
                 </div>
 
