@@ -4,7 +4,18 @@ class SignUp extends Component {
     state = {  };
     render() {
         return (
-            <div>Sign Up</div>
+            <div>
+                <h1> Sign Up</h1>
+                <div className="">
+                    <input className=""> 
+                        <span className="">
+                            <input className="">  </input>        
+                        </span>
+                    </input>
+                </div>
+
+                
+            </div>
         );
     }
 }
