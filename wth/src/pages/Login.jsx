@@ -37,8 +37,6 @@ class Login extends Component {
 	render() {
 		return (
 			<div>
-				{console.log(this.state.email)}
-				{console.log(this.state.password)}
 				<input type="email" name="email" value={this.state.email} onChange={this.handleChange} />
 				<input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
 				<button onClick={this.login}>Login</button>
