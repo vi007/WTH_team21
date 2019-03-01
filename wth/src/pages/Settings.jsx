@@ -3,13 +3,15 @@ import bulmaSwitch from "bulma-switch";
 // import { disconnect } from 'cluster';
 
 class Settings extends Component {
-    constructor() {
-        super();
-
+    constructor(props) {
+        super(props);
         this.state = {
-
+            subjects: []
         };
+
     }
+
+
 
     render() {
         return (
