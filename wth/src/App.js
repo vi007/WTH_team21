@@ -10,6 +10,7 @@ import Login from './pages/Login';
 
 import Settings from './pages/Settings';
 import Wrapper from './components/Wrapper';
+import Subject from './pages/Subject';
 
 
 class App extends Component {
@@ -48,7 +49,7 @@ class App extends Component {
 
 
 
-				<CourseChooser/>
+				<Subject/>
 				{/* {this.state.user ? (<Wrapper/>) : (<SignUp/>) } */}
 
 
