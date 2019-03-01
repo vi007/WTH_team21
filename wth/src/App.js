@@ -3,6 +3,7 @@ import HomePage from './pages/Home';
 import fire from './Fire.js';
 import Wrapper from './components/Wrapper';
 
+
 class App extends Component {
 	constructor(props) {
 		super(props);
