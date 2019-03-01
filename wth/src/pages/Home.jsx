@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class HomePage extends Component {
-    state = {  }
+    state = {  };
     render() { 
         return ( 
             <div>Homepage</div>
