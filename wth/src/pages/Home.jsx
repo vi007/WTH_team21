@@ -4,7 +4,9 @@ class HomePage extends Component {
     state = {  };
     render() { 
         return ( 
-            <div>Homepage</div>
+            <div>
+                <button className="normalButton"> Hello </button>
+            </div>
          );
     }
 }
