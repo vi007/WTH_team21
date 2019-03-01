@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 
 class Settings extends Component {
-    constructor() {
-        super();
-
+    constructor(props) {
+        super(props);
         this.state = {
-
+            subjects: []
         };
+
     }
+
+
 
     render() {
         return (
-            <div>Settings</div>
+            <div>
+
+            </div>
         );
     }
 }
