@@ -16,7 +16,8 @@ class Settings extends Component {
             <div><h1> Settings </h1>
                 <div className="field">
                     <input id="switchRoundedDefault" type="checkbox" name="switchRoundedDefault" className="switch is-rounded" checked="checked"/>
-                    <label htmlFor="switchRoundedDefault"/>
+                    <label for="switchRoundedDefault">Activate Dark mode</label>
+
                 </div>
             </div>
         );

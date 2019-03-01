@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import fire from './Fire.js';
 import Login from './pages/Login';
+import Settings from './pages/Settings';
 
 class App extends Component {
 	authListener() {
@@ -26,10 +27,11 @@ class App extends Component {
 		return (
 			<div className="App">
 
-				<Login />
+				{/* <Login /> */}
 
 				{/* <SignUp/> */}
 
+				<Settings/>
 			</div>
 		);
 	}
