@@ -47,10 +47,10 @@ class App extends Component {
 
 
 
-				{/* <SignUp/> */}
+				<CourseChooser/>
+				{/* {this.state.user ? (<Wrapper/>) : (<SignUp/>) } */}
 
 
-			 	{this.state.user ? (<Wrapper/>) : (<SignUp/>) }
 
 
 			</div>

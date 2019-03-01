@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class CourseChooser extends Component {
     constructor() {
         super();
@@ -37,9 +36,12 @@ class CourseChooser extends Component {
         let html = [];
         for (let i = 1; i <= 3; i++) {
             html.push(
-                <h1 key={i}> {this.state.subjects[i]} </h1>
-                
-             )
+                <h1 key={i}> {this.state.subjects[i]} </h1>)
+            html.push(<div className="field"><input id="switchRoundedDefault" type="checkbox"
+                                                    name="switchRoundedDefault" className="switch is-rounded"
+                                                    checked="checked"/> <label htmlFor="switchRoundedDefault">Activate
+                Dark mode</label></div>
+            )
         }
         return html
     }
