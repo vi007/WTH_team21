@@ -7,7 +7,8 @@ class SubjectList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            subjects: ["Algebra", "Fysica"]
+            subjects: ["Algebra", "Fysica", "Wiskunde"],
+            descriptor: ["Due in 3 days", "Due to tomorrow", "Due in 2 days"]
         }
     }
 
@@ -15,7 +16,14 @@ class SubjectList extends Component {
         const active = Math.round(number / 100);
         let html = [];
         for (let i = 0; i < this.state.subjects.length; i++) {
-            html.push(<div key={i} className=""> {this.state.subjects[i]}</div>)
+            html.push(
+                <div className="subjectItem">
+                    <div className="subjectPhoto"> </div>
+                    <div key={i} className="subjectLabel"> {this.state.subjects[i]}</div><br/>
+                    <div className="subjectDescriptor"> {this.state.descriptor[i]}</div>
+                </div>
+
+            );
         }
         return html
     }
