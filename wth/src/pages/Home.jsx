@@ -27,14 +27,26 @@ class Home extends Component {
 		return (
 			<div className='mainDiv'>
                 <h1 className='headTitle' > Name Game</h1>
-				<div style={{ display: 'flex' }}>
-					<button onClick={() => this.setState({ value: 0 })} style={{ float: 'left' }}>
+                
+                <div style={{ display: 'flex' }}>
+					<button className='homeButton' onClick={() => this.setState({ value: 0 })} style={{ float: 'left' }}>
 						Login
 					</button>
-					<button onClick={() => this.setState({ value: 1 })} style={{ float: 'right' }}>
+					<button className='homeButton' onClick={() => this.setState({ value: 1 })} style={{ float: 'right' }}>
 						Register
 					</button>
 				</div>
+                
+                <p>''</p>
+                
+                <div className='centeredmain'>
+                    <input className='loginField' placeholder='Username'/>
+                    <input className='loginField' placeholder='Password'/>
+                </div>
+
+                <div className="subjectItem">
+
+                </div>
 
 				{this.state.value == 0 && <Login />}
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import fire from '../Fire';
+// import firebase from "firebase/database";
+import firebase from "firebase";
 
 class SignUp extends Component {
 	constructor(props) {
@@ -29,7 +31,14 @@ class SignUp extends Component {
 			e.preventDefault();
 			fire.auth()
 				.createUserWithEmailAndPassword(this.state.email, this.state.password1)
-				//.then(currentUser => fire.firestore().collection('users'.doc(currentUser.uid).set(currentUser)))
+				.then(currentUser => {
+					firebase
+						.database()
+						.ref('users/' + currentUser.user.uid)
+						.set({
+							email: currentUser.user.email,
+						});
+				})
 				.catch(error => {
 					console.log(error);
 				});
