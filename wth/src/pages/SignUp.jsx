@@ -54,18 +54,13 @@ class SignUp extends Component {
                 
                 
 					<div className='FormField'>
-                    
-                        <div>
-						<label className="FormField__Label" htmlFor="email">
-							Username
-						</label>
-                        </div>
+
                     
                         <div>
 						<input
 							type="email"
 							id="email"
-							className="FormField__Input"
+							className="loginField fadeIn0"
 							placeholder="Enter email"
 							name="email"
 							value={this.state.email}
@@ -76,18 +71,12 @@ class SignUp extends Component {
                     
                     
 					<div className="FormField">
-                    
-                        <div>
-						<label className="FormField__Label" htmlFor="password">
-							Password
-						</label>
-                        </div>
-                        
+
                         <div>
 						<input
 							type="password"
 							id="password1"
-							className="FormField__Input"
+							className="loginField fadeIn1"
 							placeholder="Enter password"
 							name="password1"
 							value={this.state.password}

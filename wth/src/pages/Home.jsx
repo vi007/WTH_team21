@@ -27,9 +27,6 @@ class Home extends Component {
 		return (
 			<div className='mainDiv'>
 
-                
-                
-
 				{this.state.value == 0 && <Login />}
 
 				{this.state.value == 1 && <SignUp />}

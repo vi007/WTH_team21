@@ -34,6 +34,10 @@ class Login extends Component {
 			});
 	}
 
+	register() {
+		// TODO: route to  register
+	}
+
 	render() {
 		return (
             <div>
@@ -44,8 +48,10 @@ class Login extends Component {
 				
 			</div>
             <div >
-                <button className='homeButton1 fadeIn3' onClick={this.login}>Login</button>
+				<button className='homeButton1 fadeIn3' onClick={this.login}>Login</button>
+				<button className='homeButton2 fadeIn3' onClick={this.register}>Register</button>
             </div>
+
             </div>
 		);
 	}
