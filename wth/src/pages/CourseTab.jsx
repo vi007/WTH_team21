@@ -33,7 +33,8 @@ class CourseTab extends Component {
             <div>
                 <h1> {this.state.tabName} </h1>
                 <div className='contentCard'>
-                {this.generateTab()}
+                    <div className="header"> Chapters </div>
+                    {this.generateTab()}
                 </div>
 
                 

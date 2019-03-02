@@ -12,8 +12,7 @@ class SubjectList extends Component {
         }
     }
 
-    generateSubjects(number) {
-        const active = Math.round(number / 100);
+    generateSubjects() {
         let html = [];
         for (let i = 0; i < this.state.subjects.length; i++) {
             html.push(
