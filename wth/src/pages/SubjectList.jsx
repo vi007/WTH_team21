@@ -9,7 +9,7 @@ class SubjectList extends Component {
 		super(props);
 		this.state = {
 			user: this.props.user,
-			descriptor: ['Due in 3 days', 'Due to tomorrow', 'Due in 2 days'],
+			descriptor: ['Due in 3 days', 'Due to tomorrow', 'Due in 2 days', 'Due in 3 days', 'Due next week'],
 			data: [],
 			userCourses: [],
 			subject: null,
