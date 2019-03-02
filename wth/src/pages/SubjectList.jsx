@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Subject from './Subject';
-import firebase from "firebase";
-import "./SubjectList.css"
+import firebase from 'firebase';
+import './SubjectList.css';
 
 class SubjectList extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -15,31 +16,53 @@ class SubjectList extends Component {
     generateSubjects() {
         let html = [];
         for (let i = 0; i < this.state.subjects.length; i++) {
+            let fade = 'subjectItem  fadeIn' + i;
             html.push(
-                <div className="subjectItem">
+                <div className={fade}>
                     <div className="subjectPhoto"> </div>
-                    <div key={i} className="subjectLabel"> {this.state.subjects[i]}</div><br/>
+                    <div key={i} className="subjectLabel "> {this.state.subjects[i]}</div><br/>
                     <div className="subjectDescriptor"> {this.state.descriptor[i]}</div>
                 </div>
 
-            );
-        }
-        return html
-    }
+	generateSubjects() {
+		let html = [];
+		for (let i = 0; i < this.state.subjects.length; i++) {
+			html.push(
+				<div className="subjectItem">
+					<div className="subjectPhoto"> </div>
+					<div key={i} className="subjectLabel">
+						{' '}
+						{this.state.subjects[i]}
+					</div>
+					<br />
+					<div className="subjectDescriptor"> {this.state.descriptor[i]}</div>
+				</div>
+			);
+		}
+		return html;
+	}
 
+	getCourses() {
+		firebase
+			.database()
+			.ref()
+			.child('courses')
+			.on('value', snap => {
+				console.log(JSON.stringify(snap.val(), null));
+			});
+	}
 
-    
-    addCourse(){
-        firebase
-        .database()
-        .ref('courses/' + "DB")
-        .set({
-            name: "Gegevensbanken",
-            chapters: ["Hoofdstuk 1: SQL", "Hoodstuk 2: NOSQL"]
-        })
-    }
+	addCourse() {
+		firebase
+			.database()
+			.ref('courses/' + 'LA')
+			.set({
+				name: 'Lineaire Algebra',
+				chapters: ['Hoofdstuk 1: Inleiding', 'Hoodstuk 2: Vectoren'],
+			});
+	}
 
-    /*
+	/*
 	render() {
 		return (
 			<div>
@@ -52,15 +75,21 @@ class SubjectList extends Component {
 		);
 	}
 	*/
+
     render() {
     return (
     <div>
-    <h1>Subjects </h1>
+    <h1 className="fadeIn0">Subjects </h1>
     {this.generateSubjects()}
     </div>
     );
 }
 
+
+				<button onClick={this.getCourses}>Get data</button>
+			</div>
+		);
+	}
 }
 
 export default SubjectList;
