@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import bulmaSwitch from "bulma-switch";
+import bulmaSwitch from "bulma-switch"; // Laten staan, wordt wel gebruikt zelf al zegt hij van niet.
 // import { disconnect } from 'cluster';
 
 class Settings extends Component {
@@ -9,7 +9,6 @@ class Settings extends Component {
             subjects: [],
             DarkMode: true
         };
-
     }
 
     changedvalue(){
