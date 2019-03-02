@@ -4,8 +4,12 @@ class CourseChooser extends Component {
     constructor() {
         super();
         this.state = {
-            study : '',  
+            study : '',
             selectedOptions : [],
+<<<<<<< HEAD
+            subjects: [],
+            checked : [false,true,false]
+=======
             subjects: [
                 'Google',
                 'TED',
@@ -14,19 +18,25 @@ class CourseChooser extends Component {
                 'Microsoft',
             ],
             checked: []
+>>>>>>> 335793f2f76f74830ab09ef73cb91dc0f1ddfcb0
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSwitch = this.handleSwitch.bind(this);
     }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({study: event.target.value});
+    //alert('change: ' + this.state.study);
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    //alert('A name was submitted: ' + this.state.study);
     event.preventDefault();
+    this.setState({subjects : ['Lineaire Algebra',
+                                'Toepassingen van de Meetkunde',
+                                'Artificiële Intelligentie']})
   }
 
 
@@ -38,6 +48,8 @@ class CourseChooser extends Component {
 
     renderSubjects() {
         let html = [];
+<<<<<<< HEAD
+=======
 
         var data = [];
         var length = this.state.subjects.length; // user defined length
@@ -49,19 +61,32 @@ class CourseChooser extends Component {
         this.setState({
             subjects: data
         })
+>>>>>>> 335793f2f76f74830ab09ef73cb91dc0f1ddfcb0
         for (let i = 0; i < this.state.subjects.length; i++) {
             html.push(
-                <h1 key={i}> {this.state.subjects[i]} </h1>)
+                <h1> {this.state.subjects[i]} </h1>)
             html.push(<div className="field"><input id={i} type="checkbox"
                                                     name="switchRoundedDefault" className="switch is-rounded"
+<<<<<<< HEAD
+                                                    checked={this.state.checked[i]} onChange={() => this.handleSwitch(i)}/> <label htmlFor="switchRoundedDefault"></label></div>
+=======
                                                     checked={this.state.checked[i]} onChanged={this.changedValue(i)}/> <label htmlFor="switchRoundedDefault"> </label></div>
+>>>>>>> 335793f2f76f74830ab09ef73cb91dc0f1ddfcb0
             )
         }
+        html.push(<p><button type="button">Save</button></p>)
         return html
     }
 
 
+    handleSwitch(id) {
+      //let array = this.state.checked;
+      //array[id] = ! array[id];
+      alert('switched' + id);
+      this.state.checked[id] = ! this.state.checked[id] ;
+      this.state.selectedOptions.push(this.state.checked[id]);
 
+    }
 
     render() {
 
@@ -71,13 +96,14 @@ class CourseChooser extends Component {
 
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Name:
-                    <input type="text" value={this.state.value} onChange={this.handleChange} />
+                    Study:
+                    <input type="text" value={this.state.study} onChange={this.handleChange} />
                 </label>
             <input type="submit" value="Submit"/>
             </form>
                 {this.renderSubjects()}
             </div>
+
         );
     }
 }
