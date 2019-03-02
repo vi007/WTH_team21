@@ -21,6 +21,7 @@ class CourseTab extends Component {
                     <div className='tabStyle'>
                         <div key={i} className="elementLabel"> {this.props.course.chapters[i]}</div> <br/>
                         <div className='elementDecriptor'>{this.state.elements[1].subtitle}</div>
+                        
                     </div>
                 )    
             }

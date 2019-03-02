@@ -69,17 +69,26 @@ class SubjectList extends Component {
 	addCourse() {
 		firebase
 			.database()
-			.ref('courses/' + 'CN')
+			.ref('courses/' + 'AI')
 			.set({
-				name: 'Computer Networks',
+				name: 'Artificiële Intelligentie',
 				chapters: [
-					'Hoofdstuk 1: Telnet',
-					'Hoofdstuek 2: DNS',
-					'Hoofdstuk 3: FTP',
-					'Hoodstuk 4: TOR',
-					'Hoofdstuk 5: Bit-torrent',
+					'Hoofdstuk 1: Basic Search',
+					'Hoofdstuk 2: Optimal Search',
+					'Hoofdstuk 3: Version Spaces',
+					'Hoofdstuk 4: Constraint Processing',
 				],
-			});
+        	});
+        // firebase
+		// 	.database()
+		// 	.ref('courses/' + 'CN')
+		// 	.set({
+		// 		name: 'Computer Networks',
+		// 		chapters: [
+		// 			'Hoofdstuk 1: Inleiding',
+		// 			'Hoofdstuk 2: Application Layer',
+		// 		],
+		// 	});
 	}
 
 	handleBack() {
@@ -101,7 +110,15 @@ class SubjectList extends Component {
 		return (
 			<div style={{paddingBottom: 40}}>
 				{this.generateTitle()}
-				{this.state.subject == null && this.generateSubjects()}
+                {this.state.subject == null && 
+                    
+                    <div>
+                        {this.generateSubjects()}
+                        <div className="plus" onClick={this.addCourse}></div>
+                    </div>
+                    
+                    
+                }
 
 				{this.state.subject !== null && <Subject onBack={this.handleBack} course={this.state.subject} />}
 
