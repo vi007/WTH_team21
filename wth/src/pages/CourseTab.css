@@ -6,7 +6,6 @@
     color: #454f63;
     font-size: 22px;
     padding-left: 20px;
-    float:left;
     position: relative;
 }
 
@@ -17,16 +16,18 @@
     font-size: 16px;
     padding-left: 20px;
     position: relative;
+    top: 10px;
+    padding-bottom: 10px;
 }
 
 .shorterLineTab {
-    width: 80%;
-    background-color: gray;
+    width: 95%;
+    background-color: lightgray;
     top: 30px
   }
 
 .tabStyle{
-
+    margin: 30px;
 }
 
 .header {
