@@ -49,24 +49,21 @@ class CourseChooser extends Component {
             subjects: data
         })
         for (let i = 0; i < this.state.subjects.length; i++) {
-            html.push(
-                <h1> {this.state.subjects[i]} </h1>)
-            html.push(<div className="field"><input id={i} type="checkbox"
-                                                    name="switchRoundedDefault" className="switch is-rounded"
-                                                    checked={this.state.checked[i]} onChange={() => this.handleSwitch(i)}/> <label htmlFor="switchRoundedDefault"></label></div>
-            )
+
+            html.push(<h1> {this.state.subjects[i]} </h1>)
+
+
         }
-        html.push(<p><button type="button">Save</button></p>)
+        html.push(<p><button type="button">Save</button></p>);
         return html
     }
 
 
-    handleSwitch(id) {
+    handleSwitch(e) {
       //let array = this.state.checked;
       //array[id] = ! array[id];
-      alert('switched' + id);
-      this.state.checked[id] = ! this.state.checked[id] ;
-      this.state.selectedOptions.push(this.state.checked[id]);
+        alert("switched")
+
 
     }
 
