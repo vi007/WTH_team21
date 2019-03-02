@@ -36,11 +36,16 @@ class Login extends Component {
 
 	render() {
 		return (
-			<div>
-				<input type="email" name="email" value={this.state.email} onChange={this.handleChange} />
-				<input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-				<button onClick={this.login}>Login</button>
+            <div className='centeredmain'>
+			<div className='centeredmain'>            
+				<input className='loginField' type="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder='Username'/>
+				<input className='loginField' type="password" name="password" value={this.state.password} onChange={this.handleChange} placeholder='Password'/>
+				
 			</div>
+            <div >
+                <button className='homeButton' onClick={this.login}>Login</button>
+            </div>
+            </div>
 		);
 	}
 }

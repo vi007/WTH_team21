@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Subject from './Subject';
+import firebase from "firebase";
 
 class SubjectList extends Component {
     constructor(props) {
@@ -23,14 +24,40 @@ class SubjectList extends Component {
         return html
     }
 
-    render() { 
-        return ( 
-            <div>
-                <h1>Subjects </h1>
-                {this.generateSubjects()}
-            </div>
-         );
+
+    
+    addCourse(){
+        firebase
+        .database()
+        .ref('courses/' + "DB")
+        .set({
+            name: "Gegevensbanken",
+            chapters: ["Hoofdstuk 1: SQL", "Hoodstuk 2: NOSQL"]
+        })
     }
+
+    /*
+	render() {
+		return (
+			<div>
+
+				SubjectList
+				<Subject />
+
+                <button onClick={this.addCourse}>Add</button>
+			</div>
+		);
+	}
+	*/
+    render() {
+    return (
+    <div>
+    <h1>Subjects </h1>
+    {this.generateSubjects()}
+    </div>
+    );
 }
- 
+
+}
+
 export default SubjectList;
