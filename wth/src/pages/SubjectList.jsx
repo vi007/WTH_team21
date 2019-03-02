@@ -13,7 +13,8 @@ class SubjectList extends Component {
             subject: null
 		};
 
-		this.getCourses = this.getCourses.bind(this);
+        this.getCourses = this.getCourses.bind(this);
+        this.handleBack = this.handleBack.bind(this);
 	}
 
 	componentDidMount() {
@@ -66,16 +67,20 @@ class SubjectList extends Component {
 	}
 
 
+    handleBack(){
+        this.setState({subject: null})
+    }
+
 	render() {
 		return (
 			<div>
 				<h1 className="fadeIn0">Subjects </h1>
                 {this.state.subject == null && this.generateSubjects()}
 
-                {this.state.subject !== null && <Subject course={this.state.subject}></Subject>}
+                {this.state.subject !== null && <Subject onBack={this.handleBack} course={this.state.subject}></Subject>}
 
                 
-                <button onClick={this.addCourse}></button>
+                {/* <button onClick={this.addCourse}></button> */}
 			</div>
 		);
 	}

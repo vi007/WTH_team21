@@ -9,8 +9,8 @@ class Subject extends Component {
 		this.state = {
 			subjectName: 'Course Name',
 			selectedTab: 0, // 0 = Lectures, 1= Exercises, 2= Studying
-			checkLectures: false,
-			checkExercises: true,
+			checkLectures: true,
+			checkExercises: false,
 			checkStudying: false,
 			chapters: ['Hoofdstuk 1', 'Hoofdstuk 2'],
 		};
@@ -44,6 +44,7 @@ class Subject extends Component {
 		return (
 			<div className="">
 				<h1> {this.props.course.name} </h1>
+                <button className="smallButton back" onClick={this.props.onBack}></button>
 				<div>
 					/*
 					<input
@@ -73,7 +74,7 @@ class Subject extends Component {
 						onChange={this.changedvalueStudying}
 					/>
 					<label htmlFor="exampleCheckboxDanger">Studying</label>*/
-					<CourseTab />
+					<CourseTab course={this.props.course} tab={"Chapters"}/>
 				</div>
 			</div>
 		);
