@@ -6,19 +6,8 @@ class CourseChooser extends Component {
         this.state = {
             study : '',
             selectedOptions : [],
-<<<<<<< HEAD
             subjects: [],
             checked : [false,true,false]
-=======
-            subjects: [
-                'Google',
-                'TED',
-                'GitHub',
-                'Big Think',
-                'Microsoft',
-            ],
-            checked: []
->>>>>>> 335793f2f76f74830ab09ef73cb91dc0f1ddfcb0
         };
 
         this.handleChange = this.handleChange.bind(this);
