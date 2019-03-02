@@ -4,15 +4,13 @@ import fire from './Fire.js';
 import Wrapper from './components/Wrapper';
 import Subject from './pages/Subject';
 
-
-
 class App extends Component {
 	constructor(props) {
 		super(props);
 		document.body.style = 'background: #EDEDED;';
 
 		this.state = {
-			user: undefined,
+			user: null,
 		};
 
 		this.authListener = this.authListener.bind(this);
@@ -36,7 +34,7 @@ class App extends Component {
 	}
 
 	render() {
-		return <div>{this.state.user == undefined ? <HomePage/> : <Wrapper />}</div>;
+		return <div>{this.state.user == undefined ? <Wrapper/> : <Wrapper />}</div>;
 	}
 }
 
