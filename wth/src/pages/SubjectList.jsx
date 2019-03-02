@@ -7,7 +7,8 @@ class SubjectList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            subjects: ["Algebra", "Fysica"]
+            subjects: ["Algebra", "Fysica", "Wiskunde"],
+            descriptor: ["Due in 3 days", "Due to tomorrow", "Due in 2 days"]
         }
     }
 
@@ -17,8 +18,9 @@ class SubjectList extends Component {
         for (let i = 0; i < this.state.subjects.length; i++) {
             html.push(
                 <div className="subjectItem">
-                    <div key={i} className=""> {this.state.subjects[i]}</div>
-
+                    <div className="subjectPhoto"> </div>
+                    <div key={i} className="subjectLabel"> {this.state.subjects[i]}</div><br/>
+                    <div className="subjectDescriptor"> {this.state.descriptor[i]}</div>
                 </div>
 
             );
