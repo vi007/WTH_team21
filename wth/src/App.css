@@ -174,7 +174,19 @@ body {
 }
 
 .back {
-    background-image: url(assets/icons/back.png);
+     background-image: url(assets/icons/back.png);
+ }
+
+.subject {
+    background-image: url(assets/icons/subjects.png);
+}
+
+.tasks {
+    background-image: url(assets/icons/tasks.png);
+}
+
+.settings {
+    background-image: url(assets/icons/settings.png);
 }
 
 
