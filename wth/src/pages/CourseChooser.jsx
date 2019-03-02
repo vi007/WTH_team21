@@ -8,7 +8,6 @@ class CourseChooser extends Component {
             selectedOptions : [],
             subjects: [],
             checked : [false,true,false]
-
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -50,7 +49,9 @@ class CourseChooser extends Component {
             subjects: data
         })
         for (let i = 0; i < this.state.subjects.length; i++) {
+
             html.push(<h1> {this.state.subjects[i]} </h1>)
+
 
         }
         html.push(<p><button type="button">Save</button></p>);

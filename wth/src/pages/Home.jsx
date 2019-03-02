@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Login from './Login';
+import '../App.css';
 import SignUp from './SignUp';
 
 class Home extends Component {
@@ -24,7 +25,8 @@ class Home extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className='mainDiv'>
+                <h1 className='headTitle' > Name Game</h1>
 				<div style={{ display: 'flex' }}>
 					<button onClick={() => this.setState({ value: 0 })} style={{ float: 'left' }}>
 						Login
