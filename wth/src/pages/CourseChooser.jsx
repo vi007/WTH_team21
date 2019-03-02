@@ -6,8 +6,19 @@ class CourseChooser extends Component {
         this.state = {
             study : '',
             selectedOptions : [],
+<<<<<<< HEAD
             subjects: [],
             checked : [false,true,false]
+=======
+            subjects: [
+                'Google',
+                'TED',
+                'GitHub',
+                'Big Think',
+                'Microsoft',
+            ],
+            checked: []
+>>>>>>> 335793f2f76f74830ab09ef73cb91dc0f1ddfcb0
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -28,25 +39,39 @@ class CourseChooser extends Component {
                                 'Artificiële Intelligentie']})
   }
 
-  logChange(val) {
-        console.log("Selected: " + val);
+
+
+
+    changedValue(){
+        this.setState({check: ! this.state.check});
     }
-
-
-
-
-changedvalue(){
-    this.setState({check: ! this.state.check});
-}
 
     renderSubjects() {
         let html = [];
+<<<<<<< HEAD
+=======
+
+        var data = [];
+        var length = this.state.subjects.length; // user defined length
+
+        for(var i = 0; i < length; i++) {
+            data.push(false);
+        }
+
+        this.setState({
+            subjects: data
+        })
+>>>>>>> 335793f2f76f74830ab09ef73cb91dc0f1ddfcb0
         for (let i = 0; i < this.state.subjects.length; i++) {
             html.push(
                 <h1> {this.state.subjects[i]} </h1>)
             html.push(<div className="field"><input id={i} type="checkbox"
                                                     name="switchRoundedDefault" className="switch is-rounded"
+<<<<<<< HEAD
                                                     checked={this.state.checked[i]} onChange={() => this.handleSwitch(i)}/> <label htmlFor="switchRoundedDefault"></label></div>
+=======
+                                                    checked={this.state.checked[i]} onChanged={this.changedValue(i)}/> <label htmlFor="switchRoundedDefault"> </label></div>
+>>>>>>> 335793f2f76f74830ab09ef73cb91dc0f1ddfcb0
             )
         }
         html.push(<p><button type="button">Save</button></p>)

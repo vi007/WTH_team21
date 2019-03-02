@@ -22,7 +22,6 @@ class Settings extends Component {
                 <div className="field">
                     <input id="switchRoundedDefault" type="checkbox" name="switchRoundedDefault" className="switch is-rounded" checked={this.state.DarkMode} onChanged={this.changedvalue}/>
                     <label for="switchRoundedDefault">Activate Dark mode</label>
-
                 </div>
             </div>
         );
