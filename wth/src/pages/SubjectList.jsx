@@ -16,31 +16,19 @@ class SubjectList extends Component {
     generateSubjects() {
         let html = [];
         for (let i = 0; i < this.state.subjects.length; i++) {
-            let fade = 'subjectItem  fadeIn' + i;
-            html.push(
-                <div className={fade}>
-                    <div className="subjectPhoto"> </div>
-                    <div key={i} className="subjectLabel "> {this.state.subjects[i]}</div><br/>
-                    <div className="subjectDescriptor"> {this.state.descriptor[i]}</div>
-                </div>
+    let fade = 'subjectItem  fadeIn' + i;
+    html.push(
+    <div className={fade}>
+    <div className="subjectPhoto"> </div>
+    <div key={i} className="subjectLabel "> {this.state.subjects[i]}</div><br/>
+    <div className="subjectDescriptor"> {this.state.descriptor[i]}</div>
+    </div>)
+}
+        return html; }
 
-	generateSubjects() {
-		let html = [];
-		for (let i = 0; i < this.state.subjects.length; i++) {
-			html.push(
-				<div className="subjectItem">
-					<div className="subjectPhoto"> </div>
-					<div key={i} className="subjectLabel">
-						{' '}
-						{this.state.subjects[i]}
-					</div>
-					<br />
-					<div className="subjectDescriptor"> {this.state.descriptor[i]}</div>
-				</div>
-			);
-		}
-		return html;
-	}
+
+
+
 
 	getCourses() {
 		firebase
@@ -86,10 +74,6 @@ class SubjectList extends Component {
 }
 
 
-				<button onClick={this.getCourses}>Get data</button>
-			</div>
-		);
-	}
 }
 
 export default SubjectList;
