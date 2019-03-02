@@ -27,6 +27,8 @@ class Wrapper extends Component {
 				<button onClick={() => this.setState({ value: 2 })}>Settings</button>
 				<button onClick={() => this.setState({ value: 3 })}>CourseChooser</button>
 
+                <button onClick={() => this.logout}>logout</button>
+
 				{this.state.value == 0 && <SubjectList />}
 				{this.state.value == 1 && <Deadlines />}
 				{this.state.value == 2 && <Settings />}
