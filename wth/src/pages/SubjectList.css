@@ -13,6 +13,10 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
+.subjectItem:hover {
+    background-color: #f0f0f0;
+}
+
 .subjectPhoto {
     position : relative;
     height : 60px;

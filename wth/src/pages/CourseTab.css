@@ -8,6 +8,10 @@
     position: relative;
 }
 
+.elementLabel:hover {
+    color: #910f0f;
+}
+
 .elementDecriptor {
     font-family: "Futura";
     text-align: left;
