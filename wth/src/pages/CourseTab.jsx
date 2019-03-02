@@ -16,21 +16,32 @@ class CourseTab extends Component {
         const active = Math.round(number / 100);
         let html = [];
         for (let i = 0; i < this.state.elements.length; i++) {
-            html.push(
-                <div className='tabStyle'>
-                    <div key={i} className="elementLabel"> {this.state.elements[i].title}</div> <br/>
-                    <div className='elementDecriptor'>{this.state.elements[i].subtitle}</div>
-                    <div><hr className='shorterLineTab'></hr></div>
-                </div>
-            )
+            if (i === this.state.elements.length-1) {
+                html.push(
+                    <div className='tabStyle'>
+                        <div key={i} className="elementLabel"> {this.state.elements[i].title}</div> <br/>
+                        <div className='elementDecriptor'>{this.state.elements[i].subtitle}</div>
+                    </div>
+                )    
+            }
+            else{
+                html.push(
+                    <div className='tabStyle'>
+                        <div key={i} className="elementLabel"> {this.state.elements[i].title}</div> <br/>
+                        <div className='elementDecriptor'>{this.state.elements[i].subtitle}</div>
+                        <div><hr className='shorterLineTab'></hr></div>
+                    </div>
+                )
+      
+            }
+
         }
         return html
     }
 
-
     render() {
         return (
-                <div className='contentCard fadeIn0' >
+                <div className='contentCardLabel fadeIn0' >
                     <div className="header"> {this.state.tabName} </div>
                     {this.generateTab()}
                 </div>
