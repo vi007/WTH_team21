@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CourseTab from './CourseTab';
 
 class Subject extends Component {
     constructor(props){
@@ -52,6 +53,10 @@ class Subject extends Component {
                         <input className="is-checkradio has-background-color is-danger" id="exampleRadioBackgroundColorDanger" type="radio" name="exampleRadioBackgroundColorDanger" checked={this.state.checkStudying} onChange={this.changedvalueStudying}/>
                         <label for="exampleRadioBackgroundColorDanger">Studying</label>
                     </div>
+                    
+                    <CourseTab>
+
+                    </CourseTab>
 
                 </div>
             </div>
