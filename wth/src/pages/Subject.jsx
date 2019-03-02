@@ -42,7 +42,7 @@ class Subject extends Component {
 
 	render() {
 		return (
-			<div className="">
+			<div className="" >
                 <button className="smallButton back posButton fadeIn0" onClick={this.props.onBack}></button>
 				<h1 className="fadeIn0"> {this.props.course.name} </h1>
 

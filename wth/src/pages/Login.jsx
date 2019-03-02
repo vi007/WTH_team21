@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fire from '../Fire';
+import firebase from 'firebase';
 
 class Login extends Component {
 	constructor(props) {
@@ -34,8 +35,24 @@ class Login extends Component {
 			});
 	}
 
-	register() {
-		// TODO: route to  register
+	register(e) {
+		if (this.state.password1 == this.state.password2) {
+			e.preventDefault();
+			fire.auth()
+				.createUserWithEmailAndPassword(this.state.email, this.state.password)
+				.then(currentUser => {
+					firebase
+						.database()
+						.ref('users/' + currentUser.user.uid)
+						.set({
+							email: currentUser.user.email,
+							courses: ["DB", "LA"]
+						});
+				})
+				.catch(error => {
+					console.log(error);
+				});
+		}
 	}
 
 	render() {

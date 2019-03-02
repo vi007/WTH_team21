@@ -34,7 +34,12 @@ class App extends Component {
 	}
 
 	render() {
-		return <div>{this.state.user == undefined ? <HomePage/> : <Wrapper />}</div>;
+		if (this.state.user === null){
+			return <HomePage></HomePage>
+		} else{
+			return <Wrapper user={this.state.user} />
+		}
+		
 	}
 }
 

@@ -10,6 +10,7 @@ class SubjectList extends Component {
 		this.state = {
 			user: this.props.user,
 			descriptor: ['Due in 3 days', 'Due to tomorrow', 'Due in 2 days', 'Due in 3 days', 'Due next week'],
+
 			data: [],
 			userCourses: [],
 			subject: null,
@@ -21,6 +22,8 @@ class SubjectList extends Component {
 
 	async componentDidMount() {
 		this.getCourses();
+
+		// this.getUsers();
 	}
 
 	generateSubjects() {
@@ -55,6 +58,14 @@ class SubjectList extends Component {
 			});
 	}
 
+	getUsers() {
+		console.log('help');
+		firebase
+			.database()
+			.ref('/users/' + firebase.auth().currentUser.uid)
+			.on('value', snap => console.log(snap.val()));
+	}
+
 	addCourse() {
 		firebase
 			.database()
@@ -76,22 +87,25 @@ class SubjectList extends Component {
 	}
 
 	generateTitle() {
-	    if (this.state.subject == null) {
-            return (<h1 className="fadeIn0" id="">Subjects </h1>)
-        }
-	    return (<div></div>);
-
-    }
+		if (this.state.subject == null) {
+			return (
+				<h1 className="fadeIn0" id="">
+					Subjects{' '}
+				</h1>
+			);
+		}
+		return <div />;
+	}
 
 	render() {
 		return (
-			<div>
-                {this.generateTitle()}
+			<div style={{paddingBottom: 40}}>
+				{this.generateTitle()}
 				{this.state.subject == null && this.generateSubjects()}
 
 				{this.state.subject !== null && <Subject onBack={this.handleBack} course={this.state.subject} />}
 
-				<button onClick={this.addCourse} />
+				
 			</div>
 		);
 	}

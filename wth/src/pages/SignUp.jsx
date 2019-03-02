@@ -26,25 +26,7 @@ class SignUp extends Component {
 		});
 	}
 
-	signup(e) {
-		if (this.state.password1 == this.state.password2) {
-			e.preventDefault();
-			fire.auth()
-				.createUserWithEmailAndPassword(this.state.email, this.state.password1)
-				.then(currentUser => {
-					firebase
-						.database()
-						.ref('users/' + currentUser.user.uid)
-						.set({
-							email: currentUser.user.email,
-							courses: ["DB", "LA"]
-						});
-				})
-				.catch(error => {
-					console.log(error);
-				});
-		}
-	}
+	
 
 	render() {
 		return (
