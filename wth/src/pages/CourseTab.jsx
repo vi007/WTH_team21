@@ -1,22 +1,41 @@
 import React, { Component } from 'react';
+import './CourseTab.css';
 
-class Subject extends Component {
+class CourseTab extends Component {
     constructor(props){
         super(props);
         this.state = {
-            tabName: 'tabname'
+            tabName: 'tabname', //TODO link to Subject page!!!
+            elements: [{title: "Chapter one", subtitle: "Due to 4 march"}, {title: "Chapter Two", subtitle: "Due to 8 march"}, {title: "Chapter three", subtitle: "Due to 16 march"}]
+
         };
 
+    }
+
+    generateTab(number) {
+        const active = Math.round(number / 100);
+        let html = [];
+        for (let i = 0; i < this.state.elements.length; i++) {
+            html.push(
+                <div className='tabStyle'>
+                    <div key={i} className="elementLabel"> {this.state.elements[i].title}</div> <br/>
+                    <div className='elementDecriptor'>{this.state.elements[i].subtitle}</div>
+                    <div><hr className='shorterLineTab'></hr></div>
+                </div>
+            )
+        }
+        return html
     }
 
 
     render() {
         return (
-            <div>
-                <h1> {this.state.tabName} </h1>
-            </div>
+                <div className='contentCard fadeIn0' >
+                    <div className="header"> {this.state.tabName} </div>
+                    {this.generateTab()}
+                </div>
         );
     }
 }
 
-export default Subject;
+export default CourseTab;

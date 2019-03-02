@@ -1,42 +1,56 @@
 import React, { Component } from 'react';
 import Subject from './Subject';
-import firebase from "firebase";
+import firebase from 'firebase';
+import './SubjectList.css';
 
 class SubjectList extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
-            subjects: ["Algebra", "Fysica"]
+            subjects: ["Algebra", "Fysica", "Wiskunde"],
+            descriptor: ["Due in 3 days", "Due to tomorrow", "Due in 2 days"]
         }
     }
 
-    generateSubjects(number) {
-        const active = Math.round(number / 100);
+    generateSubjects() {
         let html = [];
         for (let i = 0; i < this.state.subjects.length; i++) {
-            html.push(<div key={i} className=""> {this.state.subjects[i]}</div>)
-        }
-        if (active !== 4) {
-            for (let j = 1; j <= 4-active; j++) {
-                html.push(<div key={5+j} className="attributeValue"> </div>)
-            }
-        }
-        return html
-    }
+    let fade = 'subjectItem  fadeIn' + i;
+    html.push(
+    <div className={fade}>
+    <div className="subjectPhoto"> </div>
+    <div key={i} className="subjectLabel "> {this.state.subjects[i]}</div><br/>
+    <div className="subjectDescriptor"> {this.state.descriptor[i]}</div>
+    </div>)
+}
+        return html; }
 
 
-    
-    addCourse(){
-        firebase
-        .database()
-        .ref('courses/' + "DB")
-        .set({
-            name: "Gegevensbanken",
-            chapters: ["Hoofdstuk 1: SQL", "Hoodstuk 2: NOSQL"]
-        })
-    }
 
-    /*
+
+
+	getCourses() {
+		firebase
+			.database()
+			.ref()
+			.child('courses')
+			.on('value', snap => {
+				console.log(JSON.stringify(snap.val(), null));
+			});
+	}
+
+	addCourse() {
+		firebase
+			.database()
+			.ref('courses/' + 'LA')
+			.set({
+				name: 'Lineaire Algebra',
+				chapters: ['Hoofdstuk 1: Inleiding', 'Hoodstuk 2: Vectoren'],
+			});
+	}
+
+	/*
 	render() {
 		return (
 			<div>
@@ -49,14 +63,16 @@ class SubjectList extends Component {
 		);
 	}
 	*/
+
     render() {
     return (
     <div>
-    <h1>Subjects </h1>
+    <h1 className="fadeIn0">Subjects </h1>
     {this.generateSubjects()}
     </div>
     );
 }
+
 
 }
 

@@ -1,0 +1,44 @@
+
+
+.elementLabel {
+
+    font-family: "Futura";
+    color: #454f63;
+    font-size: 22px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.elementDecriptor {
+    font-family: "Futura";
+    text-align: left;
+    color: #a5a89d;
+    font-size: 16px;
+    padding-left: 20px;
+    position: relative;
+    top: 10px;
+    padding-bottom: 10px;
+}
+
+.shorterLineTab {
+    width: 95%;
+    background-color: lightgray;
+    top: 30px
+  }
+
+.tabStyle{
+    margin: 30px;
+}
+
+.header {
+    background: #7f9bff;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 60px;
+    color: white;
+    font-family: "Futura";
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    line-height: 60px;
+}
