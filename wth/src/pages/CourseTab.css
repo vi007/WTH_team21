@@ -49,7 +49,7 @@
     margin-top: 20px;
     margin-bottom: 30px;
     resize: horizontal;
-    height: 500px;
+    height: 100%;
     background-color: white;
     border-radius: 20px;
     max-width: 580px;
