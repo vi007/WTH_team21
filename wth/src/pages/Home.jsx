@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Login from './Login';
+import '../App.css';
 import SignUp from './SignUp';
 
 class Home extends Component {
@@ -24,15 +25,28 @@ class Home extends Component {
 
 	render() {
 		return (
-			<div>
-				<div style={{ display: 'flex' }}>
-					<button onClick={() => this.setState({ value: 0 })} style={{ float: 'left' }}>
+			<div className='mainDiv'>
+                <h1 className='headTitle' > Name Game</h1>
+                
+                <div style={{ display: 'flex' }}>
+					<button className='homeButton' onClick={() => this.setState({ value: 0 })} style={{ float: 'left' }}>
 						Login
 					</button>
-					<button onClick={() => this.setState({ value: 1 })} style={{ float: 'right' }}>
+					<button className='homeButton' onClick={() => this.setState({ value: 1 })} style={{ float: 'right' }}>
 						Register
 					</button>
 				</div>
+                
+                <p>''</p>
+                
+                <div className='centeredmain'>
+                    <input className='loginField' placeholder='Username'/>
+                    <input className='loginField' placeholder='Password'/>
+                </div>
+
+                <div className="subjectItem">
+
+                </div>
 
 				{this.state.value == 0 && <Login />}
 

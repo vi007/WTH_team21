@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import HomePage from './pages/Home';
 import fire from './Fire.js';
 import Wrapper from './components/Wrapper';
-
-
+import Subject from './pages/Subject';
 
 class App extends Component {
 	constructor(props) {
 		super(props);
+		document.body.style = 'background: #EDEDED;';
 
 		this.state = {
 			user: null,

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Subject from './Subject';
 
 class SubjectList extends Component {
     state = {  }
@@ -6,6 +7,9 @@ class SubjectList extends Component {
         return ( 
             <div>
                 SubjectList
+                <Subject>
+
+                </Subject>
             </div>
          );
     }
