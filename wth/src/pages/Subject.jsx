@@ -43,10 +43,10 @@ class Subject extends Component {
 	render() {
 		return (
 			<div className="">
+                <button className="smallButton back posButton" onClick={this.props.onBack}></button>
+				<h1 className="fadeIn0"> {this.props.course.name} </h1>
+
 				<div>
-				<h1> {this.props.course.name} </h1>
-                <button className="smallButton back" onClick={this.props.onBack}></button>
-				
 					
 					<input
 						className="is-checkradio is-danger"

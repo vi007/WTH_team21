@@ -75,10 +75,18 @@ class SubjectList extends Component {
 		this.setState({ subject: null });
 	}
 
+	generateTitle() {
+	    if (this.state.subject == null) {
+            return (<h1 className="fadeIn0" id="">Subjects </h1>)
+        }
+	    return (<div></div>);
+
+    }
+
 	render() {
 		return (
 			<div>
-				<h1 className="fadeIn0">Subjects </h1>
+                {this.generateTitle()}
 				{this.state.subject == null && this.generateSubjects()}
 
 				{this.state.subject !== null && <Subject onBack={this.handleBack} course={this.state.subject} />}
