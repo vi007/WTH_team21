@@ -1,7 +1,6 @@
 
 
 .elementLabel {
-
     font-family: "Futura";
     color: #454f63;
     font-size: 22px;
@@ -20,14 +19,12 @@
     font-size: 16px;
     padding-left: 20px;
     position: relative;
-    top: 10px;
-    padding-bottom: 10px;
+    top: -10px;
 }
 
 .shorterLineTab {
     width: 95%;
     background-color: lightgray;
-    top: 30px
   }
 
 .tabStyle{
@@ -46,3 +43,17 @@
     text-align: center;
     line-height: 60px;
 }
+
+.contentCardLabel {
+    margin: 40px auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    resize: horizontal;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    max-width: 580px;
+    position: center;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  }
