@@ -175,6 +175,23 @@ button:hover {
     padding-top: 14.3em
 }
 
+
+
+/* Home page*/
+
+.headTitle{
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  color: #910f0f;
+}
+
+.mainDiv{
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+}
+
 /* 
 
 body {
