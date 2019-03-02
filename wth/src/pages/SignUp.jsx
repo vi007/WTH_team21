@@ -37,6 +37,7 @@ class SignUp extends Component {
 						.ref('users/' + currentUser.user.uid)
 						.set({
 							email: currentUser.user.email,
+							courses: ["DB", "LA"]
 						});
 				})
 				.catch(error => {
