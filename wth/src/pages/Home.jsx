@@ -36,6 +36,10 @@ class Home extends Component {
 					</button>
 				</div>
 
+                <div className="subjectItem">
+
+                </div>
+
 				{this.state.value == 0 && <Login />}
 
 				{this.state.value == 1 && <SignUp />}

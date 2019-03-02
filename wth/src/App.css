@@ -99,6 +99,42 @@ body {
 
 }
 
+{/* Misschien wel handig */}
+.shorterLine {
+  width: 80%;
+  background-color: gray;
+}
+
+.contentCard {
+  padding-top: 20px;
+  margin: 40px auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  resize: horizontal;
+  height: 300px;
+  background-color: white;
+  border-radius: 15px;
+  max-width: 580px;
+  position: center;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.subjectItem {
+  padding-top: 20px;
+  margin: 40px auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  resize: horizontal;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  max-width: 580px;
+  position: center;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
 
 
 body {
@@ -109,18 +145,7 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-button {
-    background: #0a0;
-    color: #fff;
-    border: 0;
-    border-radius: 4px;
-    padding: 1em 2em;
-    font-size: 1em;
-    cursor: pointer;
-}
-button:hover {
-    background: #0b0;
-}
+
 .grid {
     line-height: 0px;
     font-size: 0px;

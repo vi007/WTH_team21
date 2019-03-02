@@ -5,9 +5,11 @@ import Wrapper from './components/Wrapper';
 import Subject from './pages/Subject';
 
 
+
 class App extends Component {
 	constructor(props) {
 		super(props);
+		document.body.style = 'background: #EDEDED;';
 
 		this.state = {
 			user: undefined,
