@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Subject extends Component {
+class CourseTab extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -19,4 +19,4 @@ class Subject extends Component {
     }
 }
 
-export default Subject;
+export default CourseTab;
