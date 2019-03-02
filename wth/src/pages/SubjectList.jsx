@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Subject from './Subject';
 import firebase from "firebase";
-import "SubjectList.css"
+import "./SubjectList.css"
 
 class SubjectList extends Component {
     constructor(props) {
@@ -15,7 +15,13 @@ class SubjectList extends Component {
         const active = Math.round(number / 100);
         let html = [];
         for (let i = 0; i < this.state.subjects.length; i++) {
-            html.push(<div key={i} className=""> {this.state.subjects[i]}</div>)
+            html.push(
+                <div className="subjectItem">
+                    <div key={i} className=""> {this.state.subjects[i]}</div>
+
+                </div>
+
+            );
         }
         return html
     }
