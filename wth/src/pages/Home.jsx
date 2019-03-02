@@ -39,14 +39,7 @@ class Home extends Component {
                 
                 <p>''</p>
                 
-                <div className='centeredmain'>
-                    <input className='loginField' placeholder='Username'/>
-                    <input className='loginField' placeholder='Password'/>
-                </div>
-
-                <div className="subjectItem">
-
-                </div>
+                
 
 				{this.state.value == 0 && <Login />}
 
