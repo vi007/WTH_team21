@@ -12,6 +12,7 @@ class Subject extends Component {
             checkLectures: false,
             checkExercises: true,
             checkStudying: false,
+            chapters: ['Hoofdstuk 1', 'Hoofdstuk 2']
         };
 
         this.changedvalueLecture = this.changedvalueLecture.bind(this);
@@ -47,19 +48,21 @@ class Subject extends Component {
             <div className="">
                 <h1> {this.state.subjectName} </h1>
                 <div>
-                    <div className="field">
 
-                        <input className="is-checkradio is-danger" id="exampleCheckboxDanger" type="checkbox" name="exampleCheckboxDanger" checked={this.state.checkLectures} onChange={this.changedvalueLecture}/>
+
+                        /*<input className="is-checkradio is-danger" id="exampleCheckboxDanger" type="checkbox" name="exampleCheckboxDanger" checked={this.state.checkLectures} onChange={this.changedvalueLecture}/>
                         <label htmlFor="exampleCheckboxDanger">Lectures</label>
 
                         <input className="is-checkradio is-danger" id="exampleCheckboxDanger" type="checkbox" name="exampleCheckboxDanger" checked={this.state.checkExercises} onChange={this.changedvalueExercises}/>
                         <label htmlFor="exampleCheckboxDanger">Exercises</label>
 
                         <input className="is-checkradio is-danger" id="exampleCheckboxDanger" type="checkbox" name="exampleCheckboxDanger"checked={this.state.checkStudying} onChange={this.changedvalueStudying}/>
-                        <label htmlFor="exampleCheckboxDanger">Studying</label>
+                        <label htmlFor="exampleCheckboxDanger">Studying</label>*/
+
+
                         
 
-                    </div>
+
                     
                     <CourseTab>
 
