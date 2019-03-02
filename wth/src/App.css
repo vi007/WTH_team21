@@ -203,6 +203,10 @@ body {
     background-image: url(assets/icons/settings.png);
 }
 
+.plus {
+    background-image: url(assets/icons/plus.png);
+}
+
 
 .FormField{
     display: inline-block;
