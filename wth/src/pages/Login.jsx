@@ -36,14 +36,15 @@ class Login extends Component {
 
 	render() {
 		return (
-            <div className='centeredmain'>
+            <div>
+				<h1 className="boldLogin fadeIn0">Log in</h1>
 			<div className='centeredmain'>            
-				<input className='loginField' type="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder='Username'/>
-				<input className='loginField' type="password" name="password" value={this.state.password} onChange={this.handleChange} placeholder='Password'/>
+				<input className='loginField fadeIn1' type="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder='Username'/>
+				<input className='loginField fadeIn2' type="password" name="password" value={this.state.password} onChange={this.handleChange} placeholder='Password'/>
 				
 			</div>
             <div >
-                <button className='homeButton' onClick={this.login}>Login</button>
+                <button className='homeButton1 fadeIn3' onClick={this.login}>Login</button>
             </div>
             </div>
 		);
