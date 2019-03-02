@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CourseTab from './CourseTab';
-import BulmaCheckradio from "bulma-checkradio";
+//import BulmaCheckradio from "bulma-checkradio";
 import bulmaSwitch from "bulma-switch"; // Laten staan, wordt wel gebruikt zelf al zegt hij van niet.
 
 class Subject extends Component {
