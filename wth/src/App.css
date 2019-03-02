@@ -373,7 +373,12 @@ body {
   float: left;
 }
 switchLink:hover{
-    color:'black';
+    color:black;
+}
+
+.hoverColor:hover {
+    color: black;
+    cursor: pointer;
 }
 
 .line{

@@ -30,7 +30,7 @@ class Settings extends Component {
                 
                 <div className='switchLink' style={{color: 'grey'}}>
 
-                    <label>Automatic Dark Mode</label>
+                    <label className="hoverColor">Automatic Dark Mode</label>
                 </div> <br/><br/> 
                 
                 <div className='line' style={{color: 'grey'}}>
