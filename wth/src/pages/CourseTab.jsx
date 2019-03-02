@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import './CourseTab.css';
 
 class CourseTab extends Component {
     constructor(props){
         super(props);
         this.state = {
             tabName: 'tabname',
-            elements: [{title: "Chapter one", subtitle: "Due to 4 march"}]
+            elements: [{title: "Chapter one", subtitle: "Due to 4 march"}, {title: "Chapter Two", subtitle: "Due to 8 march"}, {title: "Chapter three", subtitle: "Due to 16 march"}]
 
         };
 
@@ -16,9 +17,10 @@ class CourseTab extends Component {
         let html = [];
         for (let i = 0; i < this.state.elements.length; i++) {
             html.push(
-                <div className=''>
-                    <div key={i} className=""> {this.state.elements[i].title}</div>
-                    <span>elements.subtitle</span> 
+                <div className='tabStyle'>
+                    <div key={i} className="elementLabel"> {this.state.elements[i].title}</div>
+                    <div className='elementDecriptor'>{this.state.elements[i].subtitle}</div>
+                    <div><hr className='shorterLineTab'></hr></div>
                 </div>
             )
         }
@@ -31,8 +33,9 @@ class CourseTab extends Component {
             <div>
                 <h1> {this.state.tabName} </h1>
                 <div className='contentCard'>
-                {this.generateSubjects()}
+                {this.generateTab()}
                 </div>
+
                 
             </div>
         );

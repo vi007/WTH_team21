@@ -1,0 +1,36 @@
+
+
+.elementLabel {
+
+    font-family: "Futura";
+    color: #454f63;
+    font-size: 22px;
+    padding-left: 20px;
+    float:left;
+    display: inline-block;
+    position: relative;
+}
+
+.elementDecriptor {
+    font-family: "Futura";
+    text-align: left;
+    color: #a5a89d;
+    font-size: 16px;
+    padding-left: 20px;
+    top: 30px;
+    left: -60px;
+    float:left;
+    display: inline-block;
+    position: relative;
+}
+
+.shorterLineTab {
+    width: 80%;
+    background-color: gray;
+    top: 30px
+  }
+
+  .tabStyle{
+    margin: 10px
+    
+  }
