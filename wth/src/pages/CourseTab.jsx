@@ -20,7 +20,7 @@ class CourseTab extends Component {
                 html.push(
                     <div className='tabStyle'>
                         <div key={i} className="elementLabel"> {this.props.course.chapters[i]}</div> <br/>
-                        <div className='elementDecriptor'>{this.state.elements[i].subtitle}</div>
+                        <div className='elementDecriptor'>{this.state.elements[1].subtitle}</div>
                     </div>
                 )    
             }
@@ -28,7 +28,7 @@ class CourseTab extends Component {
                 html.push(
                     <div className='tabStyle'>
                         <div key={i} className="elementLabel"> {this.props.course.chapters[i]}</div> <br/>
-                        <div className='elementDecriptor'>{this.state.elements[i].subtitle}</div>
+                        <div className='elementDecriptor'>{this.state.elements[1].subtitle}</div>
                         <div><hr className='shorterLineTab'></hr></div>
                     </div>
                 )

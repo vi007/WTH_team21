@@ -46,7 +46,7 @@ class Subject extends Component {
 				<h1> {this.props.course.name} </h1>
                 <button className="smallButton back" onClick={this.props.onBack}></button>
 				<div>
-					/*
+					
 					<input
 						className="is-checkradio is-danger"
 						id="exampleCheckboxDanger"
@@ -73,7 +73,7 @@ class Subject extends Component {
 						checked={this.state.checkStudying}
 						onChange={this.changedvalueStudying}
 					/>
-					<label htmlFor="exampleCheckboxDanger">Studying</label>*/
+					<label htmlFor="exampleCheckboxDanger">Studying</label>
 					<CourseTab course={this.props.course} tab={"Chapters"}/>
 				</div>
 			</div>

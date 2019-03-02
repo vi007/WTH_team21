@@ -8,16 +8,18 @@ class SubjectList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			user: this.props.user,
 			descriptor: ['Due in 3 days', 'Due to tomorrow', 'Due in 2 days'],
-            data: [],
-            subject: null
+			data: [],
+			userCourses: [],
+			subject: null,
 		};
 
-        this.getCourses = this.getCourses.bind(this);
-        this.handleBack = this.handleBack.bind(this);
+		this.getCourses = this.getCourses.bind(this);
+		this.handleBack = this.handleBack.bind(this);
 	}
 
-	componentDidMount() {
+	async componentDidMount() {
 		this.getCourses();
 	}
 
@@ -26,12 +28,9 @@ class SubjectList extends Component {
 		for (let i = 0; i < this.state.data.length; i++) {
 			let fade = 'subjectItem  fadeIn' + i;
 			html.push(
-                    <div className={fade} key={i} onClick={() => this.setState({subject: this.state.data[i]})}>
+				<div className={fade} key={i} onClick={() => this.setState({ subject: this.state.data[i] })}>
 					<div className="subjectPhoto"> </div>
-					<div className="subjectLabel ">
-						{' '}
-						{this.state.data[i].name}
-					</div>
+					<div className="subjectLabel "> {this.state.data[i].name}</div>
 					<br />
 					<div className="subjectDescriptor"> {this.state.descriptor[i]}</div>
 				</div>
@@ -59,28 +58,32 @@ class SubjectList extends Component {
 	addCourse() {
 		firebase
 			.database()
-			.ref('courses/' + 'RLZ')
+			.ref('courses/' + 'CN')
 			.set({
-				name: 'Religie',
-				chapters: ['Hoofdstuk 1: Religie', 'Hoodstuk 2: Antropoceen'],
+				name: 'Computer Networks',
+				chapters: [
+					'Hoofdstuk 1: Telnet',
+					'Hoofdstuek 2: DNS',
+					'Hoofdstuk 3: FTP',
+					'Hoodstuk 4: TOR',
+					'Hoofdstuk 5: Bit-torrent',
+				],
 			});
 	}
 
-
-    handleBack(){
-        this.setState({subject: null})
-    }
+	handleBack() {
+		this.setState({ subject: null });
+	}
 
 	render() {
 		return (
 			<div>
 				<h1 className="fadeIn0">Subjects </h1>
-                {this.state.subject == null && this.generateSubjects()}
+				{this.state.subject == null && this.generateSubjects()}
 
-                {this.state.subject !== null && <Subject onBack={this.handleBack} course={this.state.subject}></Subject>}
+				{this.state.subject !== null && <Subject onBack={this.handleBack} course={this.state.subject} />}
 
-                
-                {/* <button onClick={this.addCourse}></button> */}
+				<button onClick={this.addCourse} />
 			</div>
 		);
 	}
