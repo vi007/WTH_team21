@@ -138,7 +138,6 @@ body {
   margin: 23px;
 }
 
-
 /* UI Buttons */
 .smallButton {
     background-color: white;
@@ -164,8 +163,6 @@ body {
 .smallButton:active {
     background-color: #dfd7d7;
 }
-
-
 
 {/* Icons */}
 
@@ -193,8 +190,6 @@ body {
 .FormField{
     display: inline-block;
     width: 100%;
-
-    
 }
 
 .FormField__Label{
