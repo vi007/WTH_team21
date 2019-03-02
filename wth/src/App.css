@@ -89,3 +89,208 @@
 .userIcon {
   background-image: url(assets/icons/user.png);
 }
+
+
+.FormField{
+
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.game {
+    margin: 0 auto;
+    text-align: center;
+}
+button {
+    background: #0a0;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 1em 2em;
+    font-size: 1em;
+    cursor: pointer;
+}
+button:hover {
+    background: #0b0;
+}
+.grid {
+    line-height: 0px;
+    font-size: 0px;
+    margin: 0 auto;
+}
+.cell {
+    position: relative;
+    display: block;
+    float: left;
+    background: #fff;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cell .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: lightgrey;
+    border-radius: 2px;
+    margin: .2vw .2vw;
+}
+.cell .inner p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+}
+.cell.wait .inner {
+    background: red;
+    cursor: default;
+}
+.cell.tap .inner {
+    background: green;
+    cursor: pointer;
+}
+.cell.dead .inner {
+    background: orange;
+}
+.cell.done .inner {
+    background: lightblue;
+}
+.cell .inner a {
+    text-decoration: none;
+}
+.overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,.3);
+    padding-top: 14.3em
+}
+
+/* 
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.game {
+    margin: 0 auto;
+    text-align: center;
+}
+button {
+    background: #0a0;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 1em 2em;
+    font-size: 1em;
+    cursor: pointer;
+}
+button:hover {
+    background: #0b0;
+}
+.grid {
+    line-height: 0px;
+    font-size: 0px;
+    margin: 0 auto;
+}
+.cell {
+    position: relative;
+    display: block;
+    float: left;
+    background: #fff;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cell .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: lightgrey;
+    border-radius: 2px;
+    margin: .2vw .2vw;
+}
+.cell .inner p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+}
+.cell.wait .inner {
+    background: red;
+    cursor: default;
+}
+.cell.tap .inner {
+    background: green;
+    cursor: pointer;
+}
+.cell.dead .inner {
+    background: orange;
+}
+.cell.done .inner {
+    background: lightblue;
+}
+.cell .inner a {
+    text-decoration: none;
+}
+.overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,.3);
+    padding-top: 14.3em
+}
+#Foto {
+     background-color: #cb382c;
+}
+
+#back {
+    background-color: #cb382c;
+}
+
+#mail {
+    color: #190630 !important;
+}
+.knop {
+    background-color: #190630 !important;
+}
+
+.file-cta {
+    border-radius: 10px !important;
+}
+
+
+#footer {
+    background-color: #cb382c !important;
+}
+
+.outsideWrapper{ 
+    width:300px; height:300px; 
+    margin:0px 0px;
+}
+.insideWrapper{ 
+    width:100%; height:100%; 
+position:relative;}
+.coveredImage{ 
+    width:100%; height:100%; 
+    position:absolute; top:0px; left:0px;
+}
+.coveringCanvas{ 
+    width:100%; height:100%; 
+    position:absolute; top:0px; left:0px;
+}
+*/
