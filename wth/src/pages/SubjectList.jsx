@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Subject from './Subject';
 import firebase from "firebase";
-import "SubjectList.css"
+import "./SubjectList.css"
 
 class SubjectList extends Component {
     constructor(props) {
