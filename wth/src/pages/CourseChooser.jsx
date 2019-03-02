@@ -6,7 +6,7 @@ class CourseChooser extends Component {
         this.state = {
             study : '',
             selectedOptions : [],
-            subjects: [],
+            subjects: ["Dummy1", "Dumy2"],
             checked : [false,true,false]
         };
 
@@ -35,28 +35,28 @@ class CourseChooser extends Component {
         this.setState({check: ! this.state.check});
     }
 
-    renderSubjects() {
-        let html = [];
+    // renderSubjects() {
+    //     let html = [];
 
-        var data = [];
-        var length = this.state.subjects.length; // user defined length
+    //     var data = [];
+    //     var length = this.state.subjects.length; // user defined length
 
-        for(var i = 0; i < length; i++) {
-            data.push(false);
-        }
+    //     for(var i = 0; i < length; i++) {
+    //         data.push(false);
+    //     }
 
-        this.setState({
-            subjects: data
-        })
-        for (let i = 0; i < this.state.subjects.length; i++) {
+    //     this.setState({
+    //         subjects: data
+    //     })
+    //     for (let i = 0; i < this.state.subjects.length; i++) {
 
-            html.push(<h1> {this.state.subjects[i]} </h1>)
+    //         html.push(<h1> {this.state.subjects[i]} </h1>)
 
 
-        }
-        html.push(<p><button type="button">Save</button></p>);
-        return html
-    }
+    //     }
+    //     html.push(<p><button type="button">Save</button></p>);
+    //     return html
+    // }
 
 
     handleSwitch(e) {
