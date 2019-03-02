@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CourseTab from './CourseTab';
-//import BulmaCheckradio from "bulma-checkradio";
+import BulmaCheckradio from "bulma-checkradio";
 import bulmaSwitch from 'bulma-switch'; // Laten staan, wordt wel gebruikt zelf al zegt hij van niet.
 
 class Subject extends Component {
@@ -42,39 +42,40 @@ class Subject extends Component {
 
 	render() {
 		return (
-			<div className="">
+			<div className="" >
                 <button className="smallButton back posButton fadeIn0" onClick={this.props.onBack}></button>
 				<h1 className="fadeIn0"> {this.props.course.name} </h1>
 
-				<div>
-					
-					<input
-						className="is-checkradio is-danger"
-						id="exampleCheckboxDanger"
+				<div className="fadeIn0 radioStyle">
+
+  					<input 	
+  						class="is-checkradio is-info"
+						id="exampleCheckboxInfo"
 						type="checkbox"
-						name="exampleCheckboxDanger"
 						checked={this.state.checkLectures}
 						onChange={this.changedvalueLecture}
 					/>
-					<label htmlFor="exampleCheckboxDanger">Lectures</label>
-					<input
-						className="is-checkradio is-danger"
-						id="exampleCheckboxDanger"
+  					<label className="subjectLabel" for="exampleCheckboxInfo">Course</label>					
+					
+  					<input 	
+  						class="is-checkradio is-info"
+						id="exampleCheckboxInfo"
 						type="checkbox"
-						name="exampleCheckboxDanger"
 						checked={this.state.checkExercises}
 						onChange={this.changedvalueExercises}
 					/>
-					<label htmlFor="exampleCheckboxDanger">Exercises</label>
-					<input
-						className="is-checkradio is-danger"
-						id="exampleCheckboxDanger"
+  					<label className="subjectLabel" for="exampleCheckboxInfo">Exercises Sessions</label>		
+
+
+  					<input 	
+  						class="is-checkradio is-info"
+						id="exampleCheckboxInfo"
 						type="checkbox"
-						name="exampleCheckboxDanger"
 						checked={this.state.checkStudying}
 						onChange={this.changedvalueStudying}
 					/>
-					<label htmlFor="exampleCheckboxDanger">Studying</label>
+  					<label className="subjectLabel" for="exampleCheckboxInfo">Studying</label>		
+
 					<CourseTab course={this.props.course} tab={"Chapters"}/>
 				</div>
 			</div>
